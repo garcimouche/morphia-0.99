@@ -66,6 +66,13 @@ public class DatastoreImpl implements Datastore, AdvancedDatastore {
 	final protected DB db;
 	protected WriteConcern defConcern = WriteConcern.SAFE;
 	
+	public DatastoreImpl(){
+	    //added by franck for WLED
+	    mongo=null;
+	    mapr=null;
+	    db=null;
+	}
+	
 	public DatastoreImpl(Morphia morphia, Mongo mongo) {
 		this(morphia, mongo, null);
 	}

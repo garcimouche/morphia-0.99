@@ -27,6 +27,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Pattern;
 
 import org.bson.BSONEncoder;
+import org.bson.BasicBSONEncoder;
 
 import com.google.code.morphia.EntityInterceptor;
 import com.google.code.morphia.Key;
@@ -577,7 +578,7 @@ public class Mapper {
 			return createKey(clazz, (Serializable) id);
 		
 		//TODO: cache the encoders, maybe use the pool version of the buffer that the driver does.
-		BSONEncoder enc = new BSONEncoder();
+		BSONEncoder enc = new BasicBSONEncoder();
 		return new Key<T>(clazz, enc.encode(toDBObject(id)));
 	}
 

@@ -27,6 +27,10 @@ public class BasicDAO<T, K> implements DAO<T, K> {
 	protected Class<T> entityClazz;
 	protected DatastoreImpl ds;
 	
+	public BasicDAO(){
+	    //added for WELD
+	}
+	
 	public BasicDAO(Class<T> entityClass, Mongo mongo, Morphia morphia, String dbName) {
 		initDS(mongo, morphia, dbName);
 		initType(entityClass);
