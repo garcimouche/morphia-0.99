@@ -128,6 +128,15 @@
 					</execution>
 				</executions>
 			</plugin>
+            <!-- fg. skip tests -->
+            <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-surefire-plugin</artifactId>
+               <version>2.4.2</version>
+               <configuration>
+                    <skipTests>true</skipTests>
+               </configuration>
+             </plugin>
 		</plugins>
 		<extensions>
 			<extension>
@@ -191,5 +200,4 @@
 		<module>validation</module>
 		<module>logging-slf4j</module>
 	</modules>
-
 </project>

@@ -126,8 +126,8 @@ public class TestPerf  extends TestBase{
 		Date added = new Date();
 	}
 
-	@Test
-    public void testAddressInsertPerf() throws Exception {
+	@Test 
+   public void testAddressInsertPerf() throws Exception {
     	int count = 10000;
     	boolean strict = true;
     	long startTicks = new Date().getTime();
